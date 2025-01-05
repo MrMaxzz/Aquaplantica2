@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
@@ -44,7 +44,7 @@ img {
 
 .navbar .main-menu ul {
   display: flex;
-  gap: 1.25rem
+  gap: 1.25rem;
 }
 
 .navbar ul li a {
@@ -62,7 +62,7 @@ img {
   margin-right: 10px;
 }
 
-.navbar ul li:last-child a{
+.navbar ul li:last-child a {
   margin-left: 10px;
 }
 
@@ -73,7 +73,7 @@ img {
 }
 
 .hero .container {
-  background: url('../images/hero-bg.png') no-repeat;
+  background: url("../images/hero-bg.png") no-repeat;
   background-size: contain;
   background-position: center bottom;
   height: 550px;
@@ -113,14 +113,13 @@ img {
   margin-bottom: 40px;
 }
 
-
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.testimonials .card p:nth-child(2){
+.testimonials .card p:nth-child(2) {
   margin-top: 30px;
   font-weight: bold;
 }
@@ -129,7 +128,7 @@ img {
 
 .pricing .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
@@ -158,6 +157,111 @@ img {
 
 .pricing .pricing-footer {
   margin: 30px 0;
+}
+
+/* FAQ */
+
+.faq {
+  padding: 40px 0;
+}
+
+.faq .faq-group {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq .faq-group .faq-group-header {
+  padding: 20px 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.faq .faq-group .faq-group-header h4 {
+  width: 95%;
+  cursor: pointer;
+}
+
+.faq .faq-group .faq-group-header i {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.faq .faq-group .faq-group-body {
+  display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+  display: block;
+}
+
+.faq ul.faq-menu {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.faq ul.faq-menu li.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Footer */
+
+.footer {
+  padding: 40px 0px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .card {
+  margin: 20px 30px 30px 0;
+}
+
+.footer input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 
 /* Utility Classes */
@@ -278,4 +382,54 @@ img {
 .bg-black {
   background-color: #000;
   color: #fff;
+}
+
+/* Hamburger Button */
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 999;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  /* right: -300px; */
+  right: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+/* Media Queries */
+
+@media (max-width: 960px) {
+}
+
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .navbar .hamburger-button {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
 }
