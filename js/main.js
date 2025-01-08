@@ -46,3 +46,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerButton = document.querySelector('.hamburger-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  // Toggle the mobile menu and button animation on button click
+  hamburgerButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    hamburgerButton.classList.toggle('active');
+  });
+
+  // Function to handle menu and animation state
+  function handleMenuVisibility() {
+    const buttonStyle = window.getComputedStyle(hamburgerButton);
+
+    // Check if the button is hidden (display: none)
+    if (buttonStyle.display === 'none') {
+      mobileMenu.classList.remove('active'); // Reset menu
+      hamburgerButton.classList.remove('active'); // Reset button state
+    }
+  }
+
+  // Attach the event listener to the window resize event
+  window.addEventListener('resize', handleMenuVisibility);
+
+  // Call the function once on page load to handle the initial state
+  handleMenuVisibility();
+});
+
